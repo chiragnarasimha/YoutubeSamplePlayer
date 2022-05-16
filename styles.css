@@ -73,3 +73,15 @@ video {
 .video-container:not(.paused) .play-icon {
   display: none;
 }
+
+.video-controls-container::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+  width: 100%;
+  aspect-ratio: 6/1;
+  /* -1 will put the background behind the buttons */
+  z-index: -1;
+  pointer-events: none;
+}
