@@ -55,4 +55,21 @@ video {
   height: 30px;
   width: 30px;
   font-size: 1.1rem;
+  cursor: pointer;
+  /* This transition is to make teh button highlight on hover */
+  opacity: 0.75;
+  transition: opacity 150ms ease-in-out;
+}
+
+/* When the mouse hovers on the buttons, make them opaque to indicate that its is selected */
+.video-controls-container .controls button:hover {
+  opacity: 1;
+}
+
+.video-container.paused .pause-icon {
+  display: none;
+}
+
+.video-container:not(.paused) .play-icon {
+  display: none;
 }
